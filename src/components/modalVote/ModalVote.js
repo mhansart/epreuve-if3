@@ -3,7 +3,7 @@ import menus from '../../data/data';
 import { getDateInWord, getMonthInNumber } from '../../functions/functions';
 import Button from '../button/Button';
 
-function ModalVote({ visible, handler }) {
+function ModalVote({ visible, handler, setTextVote }) {
   const selectMenuDate = useRef();
   const [modalContent, setModalContent] = useState({ date: '', menu: { entrees: [], plats: [], desserts: [] } });
   const [voted, setVoted] = useState(menus.map((x) => ({ date: x.date, vote: 0 })));
@@ -34,6 +34,8 @@ function ModalVote({ visible, handler }) {
     menuVoted.vote++;
     setVoted(voted.filter((x) => x.date !== date));
     setVoted((prev) => [...prev, menuVoted]);
+    setTextVote(`Merci ! Ce menu a maintenant ${menuVoted.vote} vote${menuVoted.vote > 1 ? 's' : ''}`);
+    handler();
   };
   // fonction pour détecter le changement du select
   const changeDate = (e) => {

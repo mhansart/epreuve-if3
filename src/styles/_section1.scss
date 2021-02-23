@@ -15,7 +15,7 @@
     transform: rotate(-50deg);
     .line-in-circle {
       background-color: $secondary-color;
-      @include pxInRem(height, 3px);
+      @include pxInRem(height, 8px);
       width: 100%;
     }
   }

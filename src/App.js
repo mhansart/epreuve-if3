@@ -16,6 +16,7 @@ function App() {
     date: '', menu: { entrees: [], plats: [], desserts: [] },
   });
   const [modalImageSrc, setModalImageSrc] = useState('img/1.jpg');
+  const [textVote, setTextVote] = useState('');
   const [openModal, setOpenModal] = useState(false);
   const [openModalVote, setOpenModalVote] = useState(false);
   const [openModalImage, setOpenModalImage] = useState(false);
@@ -25,9 +26,8 @@ function App() {
     const menuToday = menus.filter((x) => x.date === today());
     setModalContent({ ...menuToday[0] });
   };
-  const toggleModalVote = (e) => {
+  const toggleModalVote = () => {
     setOpenModalVote(!openModalVote);
-    e.preventDefault();
   };
   const toggleModalImage = (e) => {
     if (e.target.getAttribute('src') !== null) {
@@ -39,12 +39,12 @@ function App() {
   return (
     <div className="App">
       <ModalImage handler={toggleModalImage} visible={openModalImage} content={modalImageSrc} />
-      <ModalVote visible={openModalVote} handler={toggleModalVote} />
+      <ModalVote visible={openModalVote} setTextVote={setTextVote} handler={toggleModalVote} />
       <Modal modalContent={modalContent} visible={openModal} handler={toggleModal} />
       <Header />
       <div className="main-container">
         <Section1 handler={toggleModal} />
-        <Section2 handler={toggleModalVote} />
+        <Section2 handler={toggleModalVote} textVote={textVote} />
         <Carrousel handler={toggleModalImage} />
       </div>
       <Footer />

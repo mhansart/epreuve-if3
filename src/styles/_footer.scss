@@ -1,10 +1,12 @@
 footer {
-  @include pxInRem(height, 80px);
+  @include pxInRem(height, 70px);
   background-color: $footer-color;
   align-items: center;
   justify-content: center;
   p {
-    @include pxInRem(font-size, 10px);
+    @include pxInRem(font-size, 12px);
+    padding: 0;
+    margin: 0;
     color: $white;
     a {
       text-decoration: none;

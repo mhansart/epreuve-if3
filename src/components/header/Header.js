@@ -22,7 +22,7 @@ function Header() {
   return (
     <header className="d-flex">
       <div className="container">
-        <div className="logo-container d-flex"><img src="img/logo.png" alt="logo maison Salvi" /></div>
+        <h1 className="logo-container d-flex"><img src="img/logo.png" alt="logo maison Salvi" /></h1>
         <div className="audio-control">{!isPlaying ? (
           <Play onClick={startMusic} />
         ) : (

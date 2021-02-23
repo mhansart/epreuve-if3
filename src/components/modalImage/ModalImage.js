@@ -1,6 +1,5 @@
 function ModalImage({ visible, handler, content }) {
   const isVisible = visible ? 'visible' : 'hidden';
-  console.log(content);
   return (
     <div id="overlay" style={{ visibility: isVisible }}>
       <div id="one-modal">
