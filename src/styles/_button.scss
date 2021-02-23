@@ -1,0 +1,14 @@
+button {
+  background-color: $secondary-color;
+  color: $white;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  @include pxInRem(padding, 7px);
+  @include pxInRem(padding-left, 30px);
+  @include pxInRem(padding-right, 30px);
+  transition: 0.3s;
+  &:hover {
+    background-color: $footer-color;
+  }
+}

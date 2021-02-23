@@ -1,0 +1,13 @@
+.section-carrousel {
+  background-color: $white;
+  @include pxInRem(padding-bottom, 50px);
+  .one-line {
+    padding: 0;
+  }
+  .our-dish {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

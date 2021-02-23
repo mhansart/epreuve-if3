@@ -1,0 +1,18 @@
+footer {
+  @include pxInRem(height, 80px);
+  background-color: $footer-color;
+  align-items: center;
+  justify-content: center;
+  p {
+    @include pxInRem(font-size, 10px);
+    color: $white;
+    a {
+      text-decoration: none;
+      color: $primary-color;
+      &:hover {
+        text-decoration: none;
+        color: $secondary-color;
+      }
+    }
+  }
+}

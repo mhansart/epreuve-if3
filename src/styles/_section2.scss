@@ -1,0 +1,47 @@
+.section-two {
+  background-color: $white;
+  @include pxInRem(padding-top, 80px);
+  @include pxInRem(padding-bottom, 80px);
+  h2 {
+    @include pxInRem(font-size, $title-size);
+    font-weight: 400;
+    margin: 0;
+    line-height: 1;
+    &.first-title {
+      font-weight: 700;
+      color: $secondary-color;
+    }
+  }
+  .text-content {
+    width: 90%;
+  }
+  p {
+    @include pxInRem(margin-bottom, 25px);
+    @include pxInRem(margin-top, 25px);
+  }
+  .div-half {
+    &:last-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .rounded-circle {
+        @include pxInRem(margin-left, 15px);
+        @include pxInRem(height, 250px);
+        @include pxInRem(width, 250px);
+        background-color: $white;
+        overflow: hidden;
+        z-index: 1;
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+}

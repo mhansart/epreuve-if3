@@ -1,0 +1,66 @@
+.section-one {
+  background-color: $primary-color;
+  @include pxInRem(padding-top, 80px);
+  @include pxInRem(padding-bottom, 80px);
+
+  .decorate-top {
+    @include pxInRem(height, 150px);
+    @include pxInRem(width, 150px);
+    position: absolute;
+    @include pxInRem(top, -60px);
+    @include pxInRem(left, 30px);
+    overflow: hidden;
+    justify-content: space-between;
+    flex-direction: column;
+    transform: rotate(-50deg);
+    .line-in-circle {
+      background-color: $secondary-color;
+      @include pxInRem(height, 3px);
+      width: 100%;
+    }
+  }
+  .decorate-bottom {
+    @include pxInRem(height, 150px);
+    @include pxInRem(width, 150px);
+    background-color: $secondary-color;
+    position: absolute;
+    @include pxInRem(bottom, -60px);
+    @include pxInRem(right, 40px);
+    z-index: 1;
+  }
+}
+.div-half {
+  z-index: 1;
+  width: 50%;
+  background-color: $white;
+  &:nth-child(2n) {
+    @include pxInRem(padding, 30px);
+    .text-content {
+      @include pxInRem(padding-top, 15px);
+      @include pxInRem(padding-bottom, 15px);
+      width: 90%;
+    }
+    p {
+      @include pxInRem(font-size, $content-size);
+      font-weight: 500;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .img-container {
+    @include pxInRem(height, 150px);
+    @include pxInRem(width, 150px);
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  &:nth-child(3n) {
+    background-size: cover;
+    background-position: center center;
+  }
+}

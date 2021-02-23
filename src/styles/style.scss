@@ -1,6 +1,28 @@
+@use 'variables' as *;
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import "mixin";
+@import "button";
+@import "header";
+@import "section1";
+@import "section2";
+@import "carrousel";
+@import "footer";
+@import "modal";
+
 * {
   box-sizing: border-box;
+  font-family: $main-font;
 }
-body {
-  background-color: red;
+.main-container {
+  @include pxInRem(padding-top, 95px);
+  background-color: $primary-color;
+}
+.container {
+  @include pxInRem(padding-right, 100px);
+  @include pxInRem(padding-left, 100px);
+  position: relative;
+}
+.bold {
+  font-weight: 700;
 }

@@ -1,0 +1,33 @@
+header {
+  z-index: 10;
+  background-color: $white;
+  @include pxInRem(height, 80px);
+  position: fixed;
+  width: 100%;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo-container {
+    height: 100%;
+    align-items: center;
+    @include pxInRem(width, 250px);
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .audio-control {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+  svg {
+    @include pxInRem(height, 30px);
+    cursor: pointer;
+    &.btn-stop {
+      @include pxInRem(margin-left, 5px);
+    }
+  }
+}

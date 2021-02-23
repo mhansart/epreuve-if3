@@ -29,5 +29,8 @@ module.exports = {
     'react/button-has-type': 'off',
     'react/jsx-props-no-spreading': 'off',
     'no-unused-expressions': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'no-plusplus': 'off',
   },
 };
